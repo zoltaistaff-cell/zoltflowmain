@@ -51,7 +51,7 @@ export function CursorGlow() {
       className="pointer-events-none fixed inset-0 z-0 opacity-0 transition-opacity duration-500"
       style={{
         backgroundImage:
-          "linear-gradient(to right, rgba(128,128,128,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(128,128,128,0.07) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(128,128,128,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(128,128,128,0.15) 1px, transparent 1px)",
         backgroundSize: "64px 64px",
       }}
     />
