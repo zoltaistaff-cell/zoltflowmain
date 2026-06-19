@@ -8,11 +8,11 @@ import {
 const faqs = [
   {
     q: "How is this different from hiring an agency?",
-    a: "Agencies sell you ongoing labor and keep the keys. We build owned systems, document them, and hand them over. The goal is to make ourselves unnecessary—not to bill you forever.",
+    a: "Agencies sell you ongoing labor and keep the keys. We build owned systems, document them, and hand them over. The goal is to make ourselves unnecessary,not to bill you forever.",
   },
   {
     q: "We already have tools. Will you replace our stack?",
-    a: "No. We work inside the tools you already pay for and connect them properly. If something genuinely isn't fit for purpose, we'll tell you—but rip-and-replace is the exception, not the default.",
+    a: "No. We work inside the tools you already pay for and connect them properly. If something genuinely isn't fit for purpose, we'll tell you,but rip-and-replace is the exception, not the default.",
   },
   {
     q: "What actually happens on the systems audit?",

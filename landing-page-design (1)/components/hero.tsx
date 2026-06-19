@@ -36,7 +36,7 @@ export function Hero() {
 
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             We engineer the automation, data pipelines, and outbound infrastructure that let lean operators compound
-            revenue—without adding bodies, agencies, or busywork.
+            revenue,without adding bodies, agencies, or busywork.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

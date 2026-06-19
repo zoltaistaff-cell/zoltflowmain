@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
 
 const navLinks = [
@@ -52,9 +53,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Button onClick={scrollToContact} className="rounded-full font-medium">
-          Book a Call
-        </Button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button onClick={scrollToContact} className="rounded-full font-medium">
+            Book a Call
+          </Button>
+        </div>
       </div>
     </header>
   )

@@ -22,7 +22,7 @@ const metrics = [
   {
     value: "18 days",
     label: "From kickoff to live system",
-    detail: "Shipped a full revenue data layer—warehouse, attribution, dashboards—in under three weeks.",
+    detail: "Shipped a full revenue data layer,warehouse, attribution, dashboards,in under three weeks.",
     tag: "Marketplace",
   },
 ]

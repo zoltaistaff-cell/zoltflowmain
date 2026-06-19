@@ -41,7 +41,7 @@ export function ContactForm() {
           </h2>
           <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
             Tell us where you are today. If it&apos;s a fit, we&apos;ll send a calendar link for a working teardown of
-            your funnel—no obligation, no generic pitch.
+            your funnel,no obligation, no generic pitch.
           </p>
           <ul className="mt-8 grid gap-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-3">

@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { OffersBento } from "@/components/offers-bento"
@@ -12,6 +15,11 @@ import { SiteFooter } from "@/components/site-footer"
 import { CursorGlow } from "@/components/cursor-glow"
 
 export default function Page() {
+  useEffect(() => {
+    window.history.scrollRestoration = "manual"
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior })
+  }, [])
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <CursorGlow />

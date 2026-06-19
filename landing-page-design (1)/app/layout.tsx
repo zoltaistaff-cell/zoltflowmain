@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Northbound — Revenue Systems for Operators',
+  title: 'Northbound , Revenue Systems for Operators',
   description:
     'We engineer the automation, data, and outbound systems that let lean teams scale revenue without scaling headcount. Apply for a systems audit.',
   generator: 'v0.app',

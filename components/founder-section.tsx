@@ -26,8 +26,8 @@ export function FounderSection() {
               </p>
 
               <div className="pt-2">
-                <p className="font-heading font-semibold text-foreground">Dr. Sarah Chen</p>
-                <p className="text-sm text-muted-foreground">Founder, ZoltFlow</p>
+                <p className="font-heading font-semibold text-foreground">David Zolt</p>
+                <p className="text-sm text-muted-foreground">AI Automation Architect, ZoltFlow</p>
               </div>
             </div>
           </div>
@@ -36,14 +36,14 @@ export function FounderSection() {
             <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-border/60 bg-card/40">
               <Image
                 src="/placeholder-user.jpg"
-                alt="Dr. Sarah Chen, Founder of ZoltFlow"
+                alt="David Zolt, Founder of ZoltFlow"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 sizes="(max-width: 768px) 100vw, 384px"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent p-6 pt-16">
-                <p className="font-heading font-semibold text-foreground">Dr. Sarah Chen</p>
-                <p className="text-xs text-muted-foreground">Founder & CEO</p>
+                <p className="font-heading font-semibold text-foreground">David Zolt</p>
+                <p className="text-xs text-muted-foreground">AI Automation Architect</p>
               </div>
             </div>
           </div>

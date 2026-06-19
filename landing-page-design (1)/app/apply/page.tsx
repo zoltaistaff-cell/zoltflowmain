@@ -4,7 +4,7 @@ import { IntakeForm } from "@/components/intake-form"
 import { PhoneOff, ShieldCheck, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Apply — Zolt Flow",
+  title: "Apply , Zolt Flow",
   description:
     "Apply to deploy Zolt Flow's AI front desk for your dental and medical practice. Recover missed calls, book appointments 24/7, and never miss a patient again.",
 }
@@ -13,7 +13,7 @@ const trustItems = [
   {
     icon: PhoneOff,
     title: "Zero missed calls",
-    body: "Every inbound call answered in seconds, day or night — no voicemail, no lost patients.",
+    body: "Every inbound call answered in seconds, day or night , no voicemail, no lost patients.",
   },
   {
     icon: Clock,
@@ -50,7 +50,7 @@ export default function ApplyPage() {
             Your AI front desk that never misses a patient.
           </h1>
           <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
-            Zolt Flow answers every call, books appointments, and follows up automatically — so
+            Zolt Flow answers every call, books appointments, and follows up automatically , so
             your team stops drowning in the phones and your chairs stay full. Tell us about your
             practice and we&apos;ll map your recovered revenue on a call.
           </p>

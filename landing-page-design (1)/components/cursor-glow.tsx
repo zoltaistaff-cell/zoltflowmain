@@ -58,7 +58,7 @@ export function CursorGlow() {
 
   return (
     <>
-      {/* Large ambient halo — trails the pointer */}
+      {/* Large ambient halo , trails the pointer */}
       <div
         ref={glowRef}
         aria-hidden="true"
@@ -68,7 +68,7 @@ export function CursorGlow() {
             "radial-gradient(circle, color-mix(in oklch, var(--primary) 55%, transparent) 0%, color-mix(in oklch, var(--primary) 22%, transparent) 35%, transparent 70%)",
         }}
       />
-      {/* Bright pulsing core — tracks tightly */}
+      {/* Bright pulsing core , tracks tightly */}
       <div
         ref={coreRef}
         aria-hidden="true"

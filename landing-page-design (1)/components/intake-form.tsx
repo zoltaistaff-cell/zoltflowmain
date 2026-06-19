@@ -106,7 +106,7 @@ export function IntakeForm() {
             id="practice"
             value={fields.practice}
             onChange={(e) => update("practice", e.target.value)}
-            placeholder="Rivera Family Dental — 3 locations, Austin TX"
+            placeholder="Rivera Family Dental , 3 locations, Austin TX"
             aria-invalid={!!errors.practice}
           />
           {errors.practice && <p className="text-sm text-destructive">{errors.practice}</p>}

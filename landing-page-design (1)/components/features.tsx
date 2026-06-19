@@ -4,7 +4,7 @@ const features = [
   {
     icon: Gauge,
     title: "Built in weeks, not quarters",
-    body: "We ship working systems fast, then iterate against live data—no six-month discovery decks.",
+    body: "We ship working systems fast, then iterate against live data,no six-month discovery decks.",
   },
   {
     icon: Puzzle,

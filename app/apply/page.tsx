@@ -5,7 +5,7 @@ import { PhoneOff, ShieldCheck, Clock } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Apply — ZoltFlow",
+  title: "Apply | ZoltFlow",
   description:
     "Apply to deploy ZoltFlow's AI patient handoff for your dental practice. Stop losing patients to voicemail, book appointments 24/7.",
 }
@@ -14,7 +14,7 @@ const trustItems = [
   {
     icon: PhoneOff,
     title: "Zero missed calls",
-    body: "Every inbound call answered in seconds, day or night — no voicemail, no lost patients.",
+    body: "Every inbound call answered in seconds, day or night. No voicemail, no lost patients.",
   },
   {
     icon: Clock,
@@ -60,7 +60,7 @@ export default function ApplyPage() {
             Your AI front desk that never misses a patient.
           </h1>
           <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
-            ZoltFlow answers every call, books appointments, and follows up automatically — so
+            ZoltFlow answers every call, books appointments, and follows up automatically, so
             your team stops drowning in the phones and your chairs stay full. Tell us about your
             practice and we&apos;ll map your recovered revenue on a call.
           </p>

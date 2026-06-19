@@ -5,7 +5,7 @@ export function SiteFooter() {
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-xs">
             <div className="flex items-center gap-2">
-              {/* Logo placeholder — swap with your own mark */}
+              {/* Logo placeholder , swap with your own mark */}
               <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M8 1L15 14H1L8 1Z" fill="currentColor" />

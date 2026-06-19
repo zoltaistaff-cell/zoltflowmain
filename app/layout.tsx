@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono, Space_Grotesk } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -14,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'ZoltFlow — AI Patient Handoff for Dental Practices',
+  title: 'ZoltFlow | AI Patient Handoff for Dental Practices',
   description:
     'Stop losing patients to voicemail. We set up AI that answers calls after hours, books appointments automatically, and follows up with patients so your team doesn\'t have to.',
   icons: {
@@ -24,7 +25,6 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
   themeColor: '#0a0a0f',
 }
 
@@ -36,11 +36,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} bg-background`}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+      <body className="font-sans antialiased bg-background text-foreground">
+        <ThemeProvider>
+          {children}
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </ThemeProvider>
       </body>
     </html>
   )

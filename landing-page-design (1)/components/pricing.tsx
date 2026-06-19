@@ -47,7 +47,7 @@ export function Pricing() {
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
             Engagements are application-only and priced per outcome. We&apos;ll scope the right fit on your audit
-            call—no public rate cards, no one-size pricing.
+            call,no public rate cards, no one-size pricing.
           </p>
         </div>
 

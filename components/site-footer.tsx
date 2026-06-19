@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function SiteFooter() {
   return (
@@ -44,14 +45,14 @@ export function SiteFooter() {
               <h3 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Legal</h3>
               <ul className="mt-4 grid gap-3 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/privacy" className="text-muted-foreground transition-colors hover:text-foreground">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">
+                  <Link href="/terms" className="text-muted-foreground transition-colors hover:text-foreground">
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
