@@ -3,12 +3,16 @@
 import { useEffect, useRef } from "react"
 
 export function CursorGlow() {
-  const gridRef = useRef<HTMLDivElement>(null)
+  const glowRef = useRef<HTMLDivElement>(null)
   const pos = useRef({ x: -9999, y: -9999 })
   const frame = useRef<number>(0)
   const active = useRef(false)
 
   useEffect(() => {
+    // Completely disable on mobile/tablet touch screens to prevent stray glow artifacts
+    const isTouch = window.matchMedia("(pointer: coarse)").matches
+    if (isTouch) return
+
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (prefersReduced) return
 
@@ -16,19 +20,18 @@ export function CursorGlow() {
       pos.current = { x: e.clientX, y: e.clientY }
       if (!active.current) {
         active.current = true
-        if (gridRef.current) gridRef.current.style.opacity = "1"
+        if (glowRef.current) glowRef.current.style.opacity = "0.08" // barely visible, clean glow
       }
     }
 
     const handleLeave = () => {
       active.current = false
-      if (gridRef.current) gridRef.current.style.opacity = "0"
+      if (glowRef.current) glowRef.current.style.opacity = "0"
     }
 
     const tick = () => {
-      if (gridRef.current) {
-        gridRef.current.style.maskImage = `radial-gradient(circle 200px at ${pos.current.x}px ${pos.current.y}px, black, transparent)`
-        gridRef.current.style.webkitMaskImage = `radial-gradient(circle 200px at ${pos.current.x}px ${pos.current.y}px, black, transparent)`
+      if (glowRef.current) {
+        glowRef.current.style.transform = `translate3d(${pos.current.x - 200}px, ${pos.current.y - 200}px, 0)`
       }
       frame.current = requestAnimationFrame(tick)
     }
@@ -46,14 +49,9 @@ export function CursorGlow() {
 
   return (
     <div
-      ref={gridRef}
+      ref={glowRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 opacity-0 transition-opacity duration-500"
-      style={{
-        backgroundImage:
-          "linear-gradient(to right, rgba(128,128,128,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(128,128,128,0.15) 1px, transparent 1px)",
-        backgroundSize: "64px 64px",
-      }}
+      className="pointer-events-none fixed left-0 top-0 z-0 h-[400px] w-[400px] rounded-full bg-primary opacity-0 blur-[120px] transition-opacity duration-500"
     />
   )
 }
