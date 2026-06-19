@@ -104,7 +104,7 @@ export function IntakeForm() {
 
       if (error) {
         console.error("Supabase submission error:", error)
-        setSubmitError("Something went wrong. Please try again or email us at hello@zoltflow.com")
+        setSubmitError(`Error: ${error.message}. Please try again or email us at hello@zoltflow.com`)
         setIsSubmitting(false)
         return
       }

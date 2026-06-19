@@ -74,7 +74,7 @@ export function ContactForm() {
 
       if (error) {
         console.error("Supabase insert error:", error)
-        setSubmitError("Something went wrong submitting your request. Please try again or email us directly.")
+        setSubmitError(`Error: ${error.message}. Please try again or email us directly.`)
         setIsSubmitting(false)
         return
       }
