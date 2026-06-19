@@ -44,6 +44,20 @@ export function Hero() {
             </Button>
             <span className="text-sm text-muted-foreground">15-minute call. We&apos;ll show you exactly what yours would handle.</span>
           </div>
+
+          <div className="mt-20 border-t border-border/40 pt-10">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-6">
+              Compatible with all major practice management platforms
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-sm font-semibold tracking-tight text-muted-foreground/60 select-none">
+              <span className="hover:text-foreground transition-colors duration-300 cursor-default">DENTRIX</span>
+              <span className="hover:text-foreground transition-colors duration-300 cursor-default">EAGLESOFT</span>
+              <span className="hover:text-foreground transition-colors duration-300 cursor-default">OPEN DENTAL</span>
+              <span className="hover:text-foreground transition-colors duration-300 cursor-default">CURVE DENTAL</span>
+              <span className="hover:text-foreground transition-colors duration-300 cursor-default">DENTICON</span>
+              <span className="text-muted-foreground/30 font-normal">&amp; more</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

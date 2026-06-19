@@ -74,7 +74,7 @@ export function IntakeForm() {
         <h3 className="font-heading text-xl font-semibold text-foreground">Application received</h3>
         <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
           {`Thanks, ${fields.name.split(" ")[0] || "there"}. Our team is reviewing your practice details and will reach out from `}
-          <span className="text-foreground">zolt.ai.staff@gmail.com</span>
+          <span className="text-foreground">hello@zoltflow.com</span>
           {` within one business day to schedule your call.`}
         </p>
       </div>
@@ -148,7 +148,7 @@ export function IntakeForm() {
         </Button>
         <p className="text-center text-xs leading-relaxed text-muted-foreground">
           {"We'll reach out from "}
-          <span className="text-foreground">zolt.ai.staff@gmail.com</span>
+          <span className="text-foreground">hello@zoltflow.com</span>
           {" within one business day."}
         </p>
       </div>

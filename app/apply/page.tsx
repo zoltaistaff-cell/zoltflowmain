@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { CursorGlow } from "@/components/cursor-glow"
 import { IntakeForm } from "@/components/intake-form"
 import { PhoneOff, ShieldCheck, Clock } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Apply — ZoltFlow",
@@ -34,9 +35,18 @@ export default function ApplyPage() {
 
       {/* Header */}
       <header className="relative z-10 flex items-center justify-center px-6 py-8">
-        <span className="font-heading text-lg font-semibold tracking-tight text-foreground">
-          ZoltFlow
-        </span>
+        <a href="/" className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="ZoltFlow logo"
+            width={28}
+            height={28}
+            className="rounded-md object-contain"
+          />
+          <span className="font-heading text-lg font-semibold tracking-tight text-foreground">
+            ZoltFlow
+          </span>
+        </a>
       </header>
 
       {/* Body */}

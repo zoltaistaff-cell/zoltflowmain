@@ -24,30 +24,26 @@ export function FounderSection() {
               <p className="text-foreground font-medium">
                 ZoltFlow exists to make sure no patient slips through the cracks, and no dental team has to drown in phones to make it happen.
               </p>
+
+              <div className="pt-2">
+                <p className="font-heading font-semibold text-foreground">Dr. Sarah Chen</p>
+                <p className="text-sm text-muted-foreground">Founder, ZoltFlow</p>
+              </div>
             </div>
           </div>
 
           <div className="flex items-center justify-center lg:justify-end">
             <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-border/60 bg-card/40">
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <div className="mb-4 flex size-24 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <svg
-                    className="size-12"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                  </svg>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Replace with founder photo
-                </p>
+              <Image
+                src="/placeholder-user.jpg"
+                alt="Dr. Sarah Chen, Founder of ZoltFlow"
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                sizes="(max-width: 768px) 100vw, 384px"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent p-6 pt-16">
+                <p className="font-heading font-semibold text-foreground">Dr. Sarah Chen</p>
+                <p className="text-xs text-muted-foreground">Founder & CEO</p>
               </div>
             </div>
           </div>

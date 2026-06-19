@@ -21,6 +21,8 @@ const SOFTWARE_OPTIONS = [
   "Open Dental",
   "Curve Dental",
   "Denticon",
+  "athenahealth",
+  "Epic",
   "Other / Not sure",
 ]
 
