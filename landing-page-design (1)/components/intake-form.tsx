@@ -114,7 +114,7 @@ export function IntakeForm() {
 
         <div className="flex flex-col gap-2">
           <Label htmlFor="software">Patient management software</Label>
-          <Select value={fields.software} onValueChange={(v) => update("software", v)}>
+          <Select value={fields.software} onValueChange={(v) => update("software", v ?? "")}>
             <SelectTrigger id="software" aria-invalid={!!errors.software}>
               <SelectValue placeholder="Select your platform" />
             </SelectTrigger>
