@@ -3,9 +3,9 @@
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Systems", href: "#offers" },
-  { label: "Results", href: "#results" },
-  { label: "Engagement", href: "#pricing" },
+  { label: "Services", href: "#services" },
+  { label: "How It Works", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ]
 
@@ -15,8 +15,8 @@ export function SiteHeader() {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" })
   }
 
-  const scrollToAudit = () => {
-    document.querySelector("#audit")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -26,15 +26,14 @@ export function SiteHeader() {
           href="#top"
           onClick={(e) => handleNav(e, "#top")}
           className="flex items-center gap-2"
-          aria-label="Northbound home"
+          aria-label="ZoltFlow home"
         >
-          {/* Logo placeholder — swap with your own mark */}
           <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M8 1L15 14H1L8 1Z" fill="currentColor" />
             </svg>
           </span>
-          <span className="font-heading text-base font-semibold tracking-tight">Northbound</span>
+          <span className="font-heading text-base font-semibold tracking-tight">ZoltFlow</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
@@ -50,8 +49,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Button onClick={scrollToAudit} className="rounded-full font-medium">
-          Book Systems Audit
+        <Button onClick={scrollToContact} className="rounded-full font-medium">
+          Book a Call
         </Button>
       </div>
     </header>

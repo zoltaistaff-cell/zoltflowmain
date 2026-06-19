@@ -1,7 +1,9 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
-import { CaseStudies } from "@/components/case-studies"
 import { OffersBento } from "@/components/offers-bento"
+import { HowItWorks } from "@/components/how-it-works"
+import { FounderSection } from "@/components/founder-section"
+import { CaseStudies } from "@/components/case-studies"
 import { Features } from "@/components/features"
 import { Pricing } from "@/components/pricing"
 import { Faq } from "@/components/faq"
@@ -15,8 +17,10 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
-        <CaseStudies />
         <OffersBento />
+        <HowItWorks />
+        <FounderSection />
+        <CaseStudies />
         <Features />
         <Pricing />
         <Faq />

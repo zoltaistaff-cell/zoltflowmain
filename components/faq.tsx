@@ -7,16 +7,28 @@ import {
 
 const faqs = [
   {
-    q: "How is this different from hiring an agency?",
-    a: "Agencies sell you ongoing labor and keep the keys. We build owned systems, document them, and hand them over. The goal is to make ourselves unnecessary—not to bill you forever.",
+    q: "Will this replace my front desk staff?",
+    a: "No. This handles the repetitive calls so your team can focus on patients in the office. It's like having extra capacity without hiring. Your staff still handles complex questions, patient check-ins, and everything that benefits from a human touch.",
   },
   {
-    q: "We already have tools. Will you replace our stack?",
-    a: "No. We work inside the tools you already pay for and connect them properly. If something genuinely isn't fit for purpose, we'll tell you—but rip-and-replace is the exception, not the default.",
+    q: "What practice management software do you integrate with?",
+    a: "Dentrix, Eaglesoft, Open Dental, Curve Dental, Denticon, and most major platforms. If you're on something else, we'll assess compatibility on our call.",
   },
   {
-    q: "What actually happens on the systems audit?",
-    a: "We tear down your current funnel and operations live, identify the highest-leverage system to build first, and show you exactly where revenue is leaking. You leave with a clear plan whether or not we work together.",
+    q: "Is this HIPAA compliant?",
+    a: "We design with HIPAA-conscious practices: data minimization, encrypted transmission, no unnecessary storage of patient health information. We'll walk through our approach on the call so you can evaluate it for your compliance requirements.",
+  },
+  {
+    q: "What happens when the AI can't handle something?",
+    a: "Urgent matters and complex situations get forwarded to your team immediately with full context. The caller gets transferred, and your staff receives a summary of the conversation so far. You always stay in control of edge cases.",
+  },
+  {
+    q: "How quickly can this be set up?",
+    a: "Typically 5-10 business days from our kickoff. We configure the system, connect your practice software, and train your team. Training takes one session, usually under an hour.",
+  },
+  {
+    q: "What does the discovery call involve?",
+    a: "About 15 minutes. We ask about your current call volume, how you handle after-hours calls now, and what software you use. We'll show you exactly what this would handle for your practice and answer any questions. No commitment, no pressure.",
   },
 ]
 
@@ -27,7 +39,7 @@ export function Faq() {
         <div className="mb-12 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Questions</p>
           <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            Everything you&apos;d ask before applying.
+            What dental practice owners usually ask.
           </h2>
         </div>
 

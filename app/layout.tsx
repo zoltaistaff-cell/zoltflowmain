@@ -14,10 +14,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Northbound — Revenue Systems for Operators',
+  title: 'ZoltFlow — AI Patient Handoff for Dental Practices',
   description:
-    'We engineer the automation, data, and outbound systems that let lean teams scale revenue without scaling headcount. Apply for a systems audit.',
-  generator: 'v0.app',
+    'Stop losing patients to voicemail. We set up AI that answers calls after hours, books appointments automatically, and follows up with patients so your team doesn\'t have to.',
   icons: {
     icon: [
       {

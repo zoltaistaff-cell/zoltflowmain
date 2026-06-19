@@ -1,25 +1,25 @@
-import { Gauge, Lock, Puzzle, Users } from "lucide-react"
+import { Gauge, Lock, Puzzle, Headphones } from "lucide-react"
 
 const features = [
   {
     icon: Gauge,
-    title: "Built in weeks, not quarters",
-    body: "We ship working systems fast, then iterate against live data—no six-month discovery decks.",
+    title: "Set up in days, not months",
+    body: "Your AI patient handoff goes live quickly. We handle configuration, testing, and training with your team.",
   },
   {
     icon: Puzzle,
-    title: "Fits your existing stack",
-    body: "We work inside the tools you already pay for. No rip-and-replace, no vendor lock-in.",
+    title: "Works with your practice software",
+    body: "Integrates with Dentrix, Eaglesoft, Open Dental, Curve Dental, and most major platforms. Not seeing yours? Ask us.",
   },
   {
-    icon: Users,
-    title: "Senior operators only",
-    body: "You work directly with the people building your systems. No junior account managers in between.",
+    icon: Headphones,
+    title: "Your staff trained in one session",
+    body: "We walk your team through how it works, what calls it handles, and when it escalates to a human. No technical knowledge needed.",
   },
   {
     icon: Lock,
-    title: "Documented & owned by you",
-    body: "Every system is documented and handed over. When we leave, the engine stays yours.",
+    title: "HIPAA-conscious design",
+    body: "Built with privacy-first handling of patient information. Data minimization, encrypted transmission, no unnecessary storage.",
   },
 ]
 
@@ -30,8 +30,11 @@ export function Features() {
         <div className="mb-14 max-w-2xl">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">How we operate</p>
           <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            A partner, engineered to make itself unnecessary.
+            We handle setup. Your team gets more time.
           </h2>
+          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+            You don&apos;t need to be technical. We configure everything, connect your software, and train your staff.
+          </p>
         </div>
 
         <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">

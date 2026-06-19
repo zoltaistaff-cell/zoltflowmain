@@ -4,9 +4,9 @@ import { IntakeForm } from "@/components/intake-form"
 import { PhoneOff, ShieldCheck, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Apply — Zolt Flow",
+  title: "Apply — ZoltFlow",
   description:
-    "Apply to deploy Zolt Flow's AI front desk for your dental and medical practice. Recover missed calls, book appointments 24/7, and never miss a patient again.",
+    "Apply to deploy ZoltFlow's AI patient handoff for your dental practice. Stop losing patients to voicemail, book appointments 24/7.",
 }
 
 const trustItems = [
@@ -35,7 +35,7 @@ export default function ApplyPage() {
       {/* Header */}
       <header className="relative z-10 flex items-center justify-center px-6 py-8">
         <span className="font-heading text-lg font-semibold tracking-tight text-foreground">
-          Zolt Flow
+          ZoltFlow
         </span>
       </header>
 
@@ -50,7 +50,7 @@ export default function ApplyPage() {
             Your AI front desk that never misses a patient.
           </h1>
           <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
-            Zolt Flow answers every call, books appointments, and follows up automatically — so
+            ZoltFlow answers every call, books appointments, and follows up automatically — so
             your team stops drowning in the phones and your chairs stay full. Tell us about your
             practice and we&apos;ll map your recovered revenue on a call.
           </p>
@@ -79,7 +79,7 @@ export default function ApplyPage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-border px-6 py-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Zolt Flow</span>
+          <span>© {new Date().getFullYear()} ZoltFlow</span>
           <span>zolt.ai.staff@gmail.com</span>
         </div>
       </footer>

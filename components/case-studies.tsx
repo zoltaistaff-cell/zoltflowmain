@@ -1,74 +1,66 @@
 import { Card } from "@/components/ui/card"
+import { TrendingUp, PhoneOff, Clock, Calendar } from "lucide-react"
 
-const metrics = [
+const targetOutcomes = [
   {
-    value: "$4.2M",
-    label: "Net new pipeline generated",
-    detail: "Built an outbound + enrichment system for a 9-person SaaS team. 11 months, zero new SDR hires.",
-    tag: "B2B SaaS",
+    icon: PhoneOff,
+    title: "Missed calls handled",
+    description: "Every after-hours and overflow call answered. No voicemail, no lost patients.",
   },
   {
-    value: "63%",
-    label: "Reduction in manual ops hours",
-    detail: "Replaced a 40-tab spreadsheet workflow with automated routing and reporting for an agency operator.",
-    tag: "Services",
+    icon: Calendar,
+    title: "More appointments booked",
+    description: "Patients book directly through conversation, even when your office is closed.",
   },
   {
-    value: "3.1x",
-    label: "Increase in qualified meetings",
-    detail: "Re-architected lead scoring and handoff so reps only touched deals worth their time.",
-    tag: "Fintech",
+    icon: Clock,
+    title: "Hours returned to your team",
+    description: "Your front desk focuses on patients in the office, not tied to the phones.",
   },
   {
-    value: "18 days",
-    label: "From kickoff to live system",
-    detail: "Shipped a full revenue data layer—warehouse, attribution, dashboards—in under three weeks.",
-    tag: "Marketplace",
+    icon: TrendingUp,
+    title: "Reduced no-shows",
+    description: "Automatic reminders and easy rescheduling keep your schedule full.",
   },
 ]
-
-const logos = ["NORTHWIND", "APEX LABS", "MERIDIAN", "OUTLIER", "BASECAMP", "VECTORA"]
 
 export function CaseStudies() {
   return (
     <section id="results" className="border-b border-border/60">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Proof, not promises</p>
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">What to expect</p>
           <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            Systems that moved the only number that matters.
+            We&apos;re building our first dental case studies.
           </h2>
+          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+            Here&apos;s what we typically see in similar implementations. On your discovery call, we&apos;ll estimate specific numbers for your practice based on your call volume and current setup.
+          </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {metrics.map((m) => (
+          {targetOutcomes.map((outcome) => (
             <Card
-              key={m.label}
+              key={outcome.title}
               className="group gap-0 border-border/60 bg-card/60 p-8 transition-colors hover:border-primary/40"
             >
-              <div className="mb-6 flex items-center justify-between">
-                <span className="font-heading text-5xl font-semibold tracking-tight text-foreground">{m.value}</span>
-                <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-                  {m.tag}
-                </span>
+              <div className="mb-5 flex size-11 items-center justify-center rounded-xl bg-primary/12 text-primary">
+                <outcome.icon className="size-5" />
               </div>
-              <p className="font-medium text-foreground">{m.label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.detail}</p>
+              <h3 className="font-heading font-semibold tracking-tight text-foreground">
+                {outcome.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {outcome.description}
+              </p>
             </Card>
           ))}
         </div>
 
-        <div className="mt-16">
-          <p className="mb-6 text-center text-xs uppercase tracking-widest text-muted-foreground">
-            Trusted by operators at
+        <div className="mt-12 rounded-xl border border-primary/20 bg-primary/[0.04] p-6 text-center">
+          <p className="text-sm text-muted-foreground">
+            Want to be among our first dental case studies? <span className="text-foreground font-medium">We&apos;re offering priority implementation to our founding practices.</span>
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-50">
-            {logos.map((logo) => (
-              <span key={logo} className="font-heading text-sm font-semibold tracking-widest text-muted-foreground">
-                {logo}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

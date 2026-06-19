@@ -6,48 +6,48 @@ import { Check } from "lucide-react"
 
 const tiers = [
   {
-    name: "Sprint",
-    summary: "A single high-leverage system, scoped and shipped end to end.",
+    name: "AI Patient Handoff",
+    summary: "After-hours and overflow call handling with appointment booking.",
     features: [
-      "One core system (automation, data, or outbound)",
-      "Direct access to senior operators",
-      "Full documentation & handover",
-      "30 days of post-launch support",
+      "24/7 call answering",
+      "Appointments booked directly into your software",
+      "Voicemail transcription and forwarding",
+      "Staff training session",
+      "30 days of support included",
     ],
-    cta: "Apply for a Sprint",
-    featured: false,
+    cta: "Get Started",
+    featured: true,
   },
   {
-    name: "Partner",
-    summary: "An embedded engagement that compounds across your entire revenue motion.",
+    name: "Full Practice Automation",
+    summary: "Complete patient communication system with reminders, follow-ups, and reactivation.",
     features: [
-      "All three systems, sequenced over time",
-      "Weekly working sessions with the build team",
-      "Ongoing iteration against live performance",
-      "Priority roadmap & dedicated channel",
-      "Quarterly systems audit included",
+      "Everything in AI Patient Handoff",
+      "Appointment reminder system (SMS & email)",
+      "No-show follow-up automation",
+      "Recare and reactivation campaigns",
+      "Monthly performance review",
     ],
-    cta: "Apply to Partner",
-    featured: true,
+    cta: "Let's Talk",
+    featured: false,
   },
 ]
 
 export function Pricing() {
-  const scrollToAudit = () => {
-    document.querySelector("#audit")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
     <section id="pricing" className="border-b border-border/60">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Engagement</p>
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Pricing</p>
           <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            We work with a handful of operators at a time.
+            Two options, depending on what you need.
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Engagements are application-only and priced per outcome. We&apos;ll scope the right fit on your audit
-            call—no public rate cards, no one-size pricing.
+            We&apos;ll discuss pricing on your call once we understand your call volume and requirements. No commitment until you know exactly what you&apos;re getting.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export function Pricing() {
                 <h3 className="font-heading text-2xl font-semibold tracking-tight">{tier.name}</h3>
                 {tier.featured && (
                   <span className="rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                    Most chosen
+                    Most practices start here
                   </span>
                 )}
               </div>
@@ -82,7 +82,7 @@ export function Pricing() {
 
               <div className="mt-8 flex-1" />
               <Button
-                onClick={scrollToAudit}
+                onClick={scrollToContact}
                 variant={tier.featured ? "default" : "outline"}
                 size="lg"
                 className="w-full rounded-full"
@@ -91,6 +91,12 @@ export function Pricing() {
               </Button>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-12 rounded-xl border border-border/60 bg-card/40 p-6 text-center">
+          <p className="text-sm text-muted-foreground">
+            Not sure which you need? <span className="text-foreground font-medium">We&apos;ll help you figure that out on the call.</span>
+          </p>
         </div>
       </div>
     </section>

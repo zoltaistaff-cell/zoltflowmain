@@ -6,10 +6,28 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { ArrowRight, CheckCircle2, Clock, Phone, MessageSquare } from "lucide-react"
+
+const SOFTWARE_OPTIONS = [
+  "Dentrix",
+  "Eaglesoft",
+  "Open Dental",
+  "Curve Dental",
+  "Denticon",
+  "Other / Not sure",
+]
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [submittedName, setSubmittedName] = useState("")
+  const [submittedEmail, setSubmittedEmail] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,40 +36,44 @@ export function ContactForm() {
     const data = new FormData(form)
     const next: Record<string, string> = {}
 
-    if (!String(data.get("name") || "").trim()) next.name = "Please enter your name."
+    const name = String(data.get("name") || "").trim()
+    if (!name) next.name = "Please enter your name."
+
     const email = String(data.get("email") || "").trim()
     if (!email) next.email = "Please enter your email."
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email address."
-    if (!String(data.get("company") || "").trim()) next.company = "Please enter your company."
+
+    if (!String(data.get("practice") || "").trim()) next.practice = "Please enter your practice name."
+    if (!String(data.get("software") || "").trim()) next.software = "Please select your software."
 
     setErrors(next)
     if (Object.keys(next).length === 0) {
-      // Visual-only success state. Wire to a backend or booking tool later.
+      setSubmittedName(name.split(" ")[0] || "there")
+      setSubmittedEmail(email)
       setSubmitted(true)
     }
   }
 
   return (
-    <section id="audit" className="border-b border-border/60">
+    <section id="contact" className="border-b border-border/60">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
         <div className="md:sticky md:top-28 md:self-start">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Apply now</p>
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">Book a call</p>
           <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            Book your systems audit.
+            See how this would work for your practice.
           </h2>
           <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
-            Tell us where you are today. If it&apos;s a fit, we&apos;ll send a calendar link for a working teardown of
-            your funnel—no obligation, no generic pitch.
+            Quick discovery call. We&apos;ll review how your phones are handled today, show you exactly what the AI would take off your plate, and answer any questions.
           </p>
           <ul className="mt-8 grid gap-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-3">
-              <CheckCircle2 className="size-4 text-primary" /> Live teardown of your current funnel
+              <Clock className="size-4 text-primary" /> 15 minutes, no commitment
             </li>
             <li className="flex items-center gap-3">
-              <CheckCircle2 className="size-4 text-primary" /> The first system we&apos;d build, and why
+              <Phone className="size-4 text-primary" /> See how calls would be handled
             </li>
             <li className="flex items-center gap-3">
-              <CheckCircle2 className="size-4 text-primary" /> A plan you keep whether we work together or not
+              <MessageSquare className="size-4 text-primary" /> Get your questions answered
             </li>
           </ul>
         </div>
@@ -62,50 +84,66 @@ export function ContactForm() {
               <div className="mb-5 flex size-14 items-center justify-center rounded-full bg-primary/12 text-primary">
                 <CheckCircle2 className="size-7" />
               </div>
-              <h3 className="font-heading text-xl font-semibold tracking-tight">Application received.</h3>
+              <h3 className="font-heading text-xl font-semibold tracking-tight">Thanks, {submittedName}.</h3>
               <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
-                We review every application personally. If it&apos;s a fit, expect a calendar link within one business
-                day.
+                We&apos;ll email you at <span className="text-foreground">{submittedEmail}</span> within one business day to schedule your call.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate className="grid gap-5">
               <div className="grid gap-2">
-                <Label htmlFor="name">Full name</Label>
-                <Input id="name" name="name" placeholder="Jordan Rivera" aria-invalid={!!errors.name} />
+                <Label htmlFor="name">Your name</Label>
+                <Input id="name" name="name" placeholder="Dr. Jordan Rivera" aria-invalid={!!errors.name} />
                 {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="email">Work email</Label>
+                <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="jordan@company.com"
+                  placeholder="jordan@example.com"
                   aria-invalid={!!errors.email}
                 />
                 {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="company">Company</Label>
-                <Input id="company" name="company" placeholder="Acme Inc." aria-invalid={!!errors.company} />
-                {errors.company && <p className="text-xs text-destructive">{errors.company}</p>}
+                <Label htmlFor="practice">Practice name</Label>
+                <Input id="practice" name="practice" placeholder="Riverside Family Dental" aria-invalid={!!errors.practice} />
+                {errors.practice && <p className="text-xs text-destructive">{errors.practice}</p>}
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="context">Where are you stuck?</Label>
+                <Label htmlFor="software">Practice management software</Label>
+                <Select name="software">
+                  <SelectTrigger id="software" aria-invalid={!!errors.software}>
+                    <SelectValue placeholder="Select your platform" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {SOFTWARE_OPTIONS.map((opt) => (
+                      <SelectItem key={opt} value={opt}>
+                        {opt}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {errors.software && <p className="text-xs text-destructive">{errors.software}</p>}
+              </div>
+
+              <div className="grid gap-2">
+                <Label htmlFor="context">Anything else you want us to know? (optional)</Label>
                 <Textarea
                   id="context"
                   name="context"
-                  rows={4}
-                  placeholder="A sentence or two on your current revenue motion and what's breaking."
+                  rows={3}
+                  placeholder="e.g. We get about 20 calls a day after hours, currently missing a lot of them."
                 />
               </div>
 
               <Button type="submit" size="lg" className="group mt-1 w-full rounded-full">
-                Submit application
+                Request a call
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
               <p className="text-center text-xs text-muted-foreground">

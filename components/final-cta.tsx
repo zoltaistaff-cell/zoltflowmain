@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export function FinalCta() {
-  const scrollToAudit = () => {
-    document.querySelector("#audit")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -23,14 +23,13 @@ export function FinalCta() {
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="font-heading text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-              Stop hiring to fix what a system should handle.
+              Every missed call is a patient who booked somewhere else.
             </h2>
             <p className="mx-auto mt-5 max-w-lg text-pretty leading-relaxed text-muted-foreground">
-              We take on a small number of operators each quarter. If you&apos;re serious about compounding revenue
-              without compounding headcount, start with an audit.
+              See how many calls you&apos;re missing and what it&apos;s costing you. A 15-minute call shows you exactly what ZoltFlow would handle for your practice.
             </p>
-            <Button onClick={scrollToAudit} size="lg" className="group mt-9 rounded-full px-8 text-base">
-              Book your systems audit
+            <Button onClick={scrollToContact} size="lg" className="group mt-9 rounded-full px-8 text-base">
+              Book Your Discovery Call
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </Button>
           </div>
